@@ -58,6 +58,7 @@ img {
 
 .logo {
 	display: flex;
+	padding: 24px 0;
 
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
@@ -76,10 +77,15 @@ img {
 }
 
 /* -------------------------Site-Nav------------------------- */
-
+.page-header {
+border-width: 0 0 1px;
+	border-style: solid;
+	border-color: #ececec;
+}
 .main-nav {
 	display: flex;
 	align-items: center;
+	
 }
 
 .site-nav {
@@ -98,7 +104,11 @@ img {
 
 .nav-link {
 	display: block;
-	padding: 32px 0px;
+	/* display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	align-items: center; */
+	padding: 31px 0px;
 
 	font-weight: 500;
 	font-size: 14px;
@@ -110,7 +120,7 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 32px 0px;
+	padding: 31px 0px;
 
 	font-weight: 500;
 	font-size: 14px;
@@ -140,6 +150,16 @@ img {
 
 .site-nav .current {
 	color: var(--accent-color);
+}
+
+.site-nav .current::after {
+	display: block;
+	content: '';
+	width: 48px;
+	height: 4px;
+	border-radius: 2px;
+	background-color: var(--accent-color);
+	/* align-self: flex-end; */
 }
 
 .nav-link:hover,
@@ -476,9 +496,9 @@ img {
 
 .filter {
 	padding: var(--section-set-gap) 0;
-	border-width: 1px 0 0;
+	/* border-width: 1px 0 0;
 	border-style: solid;
-	border-color: #ececec;
+	border-color: #ececec; */
 }
 .portfolio {
 	padding: 0;
@@ -495,7 +515,7 @@ img {
 	margin-left: var(--card-set-gap);
 	margin-top: var(--card-set-gap);
 	cursor: pointer;
-	/* position: relative; */
+	
 }
 .card-content {
 	padding: 20px 24px;
@@ -532,6 +552,7 @@ img {
 
 .card-thumb {
 	position: relative;
+	
 }
 
 .action {
@@ -549,7 +570,13 @@ padding: 63px 24px;
 	letter-spacing: 0.03em;
 	color: var(--primare-bg-color);
 	background-color: rgba(33, 150, 243, 0.9);;
+	opacity: 0;
 
+}
+
+.portfolio-flex .action:hover {
+opacity: 1;
+/* transition: 500ms opacity linear; */
 
 }
 
