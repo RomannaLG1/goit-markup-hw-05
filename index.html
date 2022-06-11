@@ -24,7 +24,6 @@
 		<header class="page-header">
 			<div class="container main-nav">
 				<nav class="main-nav">
-					
 					<a href="./index.html" class="logo link" lang="en">
 						Web
 						<span class="logo-header">Studio</span>
@@ -65,9 +64,20 @@
 			<section class="section hero">
 				<div class="container">
 					<h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-					<button type="button" class="hero-buttom">Заказать услугу</button>
+					<button data-modal-open type="button" class="hero-buttom">Заказать услугу</button>
 				</div>
 			</section>
+
+			<!-- Modal windows -->
+			<div class="backdrop is-hidden">
+				<div class="modal">
+					<button type="button" class="modal-button">
+						<svg class="modal-icon" width="18" height="18">
+							<use href="./image/sprite-opt.svg#icon-close-black"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
 
 			<!-- Feature -->
 
@@ -120,11 +130,6 @@
 					</ul>
 				</div>
 			</section>
-
-			<!-- Modal windows -->
-			<div class="backdrop is-hidden">
-				<div class="modal"></div>
-			</div>
 
 			<!-- Work -->
 
@@ -434,5 +439,41 @@
 				</div>
 			</div>
 		</footer>
+
+		<!-- Modal windows -->
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<button data-modal-close type="button" class="modal-button">
+					<svg class="modal-icon" width="18" height="18">
+						<use href="./image/sprite-opt.svg#icon-close-black"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<!-- fixed header
+<script>
+	const { height: pageHeaderHeight } = document
+	.querySelector(".page-header")
+	.getBoundingClientRect();
+	document.body.style.paddingTop = '${pageHeaderHeight}px'
+</script> -->
+
+		<!-- click button -->
+
+		<script>
+			const refs = {
+				openModalBtn: document.querySelector("[data-modal-open]"),
+				closeModalBtn: document.querySelector("[data-modal-close]"),
+				modal: document.querySelector("[data-modal]"),
+			};
+
+			refs.openModalBtn.addEventListener("click", toggleModal);
+			refs.closeModalBtn.addEventListener("click", toggleModal);
+
+			function toggleModal() {
+				refs.modal.classList.toggle("is-hidden");
+			}
+		</script>
 	</body>
 </html>
