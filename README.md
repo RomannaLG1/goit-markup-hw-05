@@ -4,6 +4,7 @@
 	background-color: rgba(255, 255, 255, 0.1);
 	top: 0;
 	left: 0;
+	z-index: 10;
 	
 #modal window js
 (() => {
