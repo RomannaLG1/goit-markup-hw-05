@@ -138,25 +138,36 @@
 					<h2 class="section-title">Чем мы занимаемся</h2>
 					<ul class="work-list list">
 						<li class="work-flex">
-							<img src="./image/box-1.jpg" alt="Работа за компьютером" width="370" height="295" class="work-img" />
+							<div class="work-thumb">
+								<img src="./image/box-1.jpg" alt="Работа за компьютером" width="370" height="295" class="work-img" />
+								<p class="work-text">Десктопные приложения</p>
+							</div>
 						</li>
+
 						<li class="work-flex">
-							<img
-								src="./image/box-2.jpg"
-								alt="Работа с мобильными устройствави"
-								width="370"
-								height="295"
-								class="work-img"
-							/>
+							<div class="work-thumb">
+								<img
+									src="./image/box-2.jpg"
+									alt="Работа с мобильными устройствави"
+									width="370"
+									height="295"
+									class="work-img"
+								/>
+								<p class="work-text">Мобильные приложения</p>
+							</div>
 						</li>
+
 						<li class="work-flex">
-							<img
-								src="./image/box-3.jpg"
-								alt="Работа с графическим дизайном"
-								width="370"
-								height="295"
-								class="work-img"
-							/>
+							<div class="work-thumb">
+								<img
+									src="./image/box-3.jpg"
+									alt="Работа с графическим дизайном"
+									width="370"
+									height="295"
+									class="work-img"
+								/>
+								<p class="work-text">Дизайнерские решения</p>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -451,29 +462,6 @@
 			</div>
 		</div>
 
-		<!-- fixed header
-<script>
-	const { height: pageHeaderHeight } = document
-	.querySelector(".page-header")
-	.getBoundingClientRect();
-	document.body.style.paddingTop = '${pageHeaderHeight}px'
-</script> -->
-
-		<!-- click button -->
-
-		<script>
-			const refs = {
-				openModalBtn: document.querySelector("[data-modal-open]"),
-				closeModalBtn: document.querySelector("[data-modal-close]"),
-				modal: document.querySelector("[data-modal]"),
-			};
-
-			refs.openModalBtn.addEventListener("click", toggleModal);
-			refs.closeModalBtn.addEventListener("click", toggleModal);
-
-			function toggleModal() {
-				refs.modal.classList.toggle("is-hidden");
-			}
-		</script>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
